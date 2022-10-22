@@ -1,12 +1,11 @@
 package com.example.finance.project.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,9 +16,5 @@ public class User {
     private Long userId;
     private String name;
     private String surname;
-//    private Credit credit;
-//    private Debit debit;
-//    private Investment investment;
-//    private SavingPlan savingPlan;
-    private Double balance;
+    private double balance;
 }

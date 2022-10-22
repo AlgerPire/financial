@@ -1,12 +1,11 @@
 package com.example.finance.project.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-@Data
+@Getter
+@Setter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,4 +18,7 @@ public class SavingPlan {
     private Double monthlyAmount;
     private Float percent;
     private LocalDate dateOfCredit;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User user;
 }
